@@ -11,6 +11,7 @@
     .container {
       border: 1px solid black;
       padding: 10px;
+
     }
 
     .btn.active {
@@ -30,37 +31,41 @@
 
     .input {
       outline: none;
-      border: none;
+      border: 1px solid black;
+      border-radius: 3px;
     }
   </style>
 </head>
 
-<body class="flex h-screen justify-center items-center bg-[#92C5FC]">
-  <main class="bg-white px-5 py-5 rounded-xl">
-    <h1 class="text-center text-5xl p-5 font-bold">My Text Editor</h1>
-    <div class='container'>
-      <div class="flex justify-between items-center border-y-2 border-black border-t-0 mb-4">
+<body class="flex  h-screen justify-center items-center bg-[#92C5FC]">
+  <main class="bg-white px-2 py-1 lg:px-5 lg:py-5 rounded-xl">
+    <h1 class="text-center text-xl lg:text-5xl p-2 lg:p-5 font-bold">My Text Editor</h1>
+    <div class='container px-2 lg:px-5 rounded-lg'>
+      <div
+        class="flex flex-col lg:flex-row justify-between items-center gap-0 lg:gap-20 border-y-2 border-black border-t-0 mb-4">
         <div class="flex gap-4">
           <button class="btn p-2 " id="bold-btn" onclick="f2(this)"><i class="fa-solid fa-bold"></i></button>
           <button class="btn p-2 " onclick="f3(this)"><i class="fa-solid fa-italic"></i></button>
           <button class="btn p-2 " onclick="f4(this)"><i class="fa-solid fa-underline"></i></button>
         </div>
-        <div class="flex gap-5 pl-20">
+
+        <div class="flex gap-5 ">
 
           <button class="btn-align p-2" onclick="f5(this)"><i class="fa-solid fa-align-left"></i></button>
           <button class="btn-align p-2" onclick="f6(this)"><i class="fa-solid fa-align-center"></i></button>
           <button class="btn-align p-2" onclick="f7(this)"><i class="fa-solid fa-align-right"></i></button>
 
         </div>
-        <div class="flex left-0 items-center justify-end gap-4">
-          <input onchange="f1(this)" id="number-input" class="input w-1/4 rounded-xl p-2" type="number" value="20">
-          <button onclick="f9(this)" class="btn p-2 cursor-pointer">aA</button>
+
+        <div class="flex left-0 items-center justify-center lg:justify-end gap-2">
+          <input onchange="f1(this)" id="number-input" class="input w-[50px] rounded " type="number" value="20">
+          <button onclick="f9(this)" class="btn p-2 cursor-pointer font-bold text-lg">aA</button>
           <input class="input" onchange="f8(this)" type="color" name="" id="">
         </div>
       </div>
       <div>
-        <textarea id="text-area" class="w-full h-[350px] p-2 rounded resize-y" name="" id="" cols="30" rows="10"
-          placeholder="Enter your text here"></textarea>
+        <textarea id="text-area" class="w-full h-[200px]  lg:h-[350px] p-2 rounded resize-y" name="" id="" cols="30"
+          rows="10" placeholder="Enter your text here"></textarea>
 
       </div>
     </div>
